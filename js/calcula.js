@@ -40,3 +40,7 @@ function decifra(mensagem, indice){
     return decifrado;
 }
 
+function criaHash(mensagem){
+    var hash = CryptoJS.SHA1(mensagem);
+    return hash.toString(CryptoJS.enc.Base64);
+}

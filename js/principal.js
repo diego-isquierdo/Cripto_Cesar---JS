@@ -1,4 +1,3 @@
-import()
 var botaoBuscar = document.querySelector("#buscarJSON");
 
 botaoBuscar.addEventListener("click", ()=>{
@@ -20,10 +19,13 @@ botaoBuscar.addEventListener("click", ()=>{
         
         if(xhr.status == 200){
             var answerJSON = JSON.parse(xhr.responseText); 
-            answerJSON.decifrado = decifra(answerJSON.cifrado, answerJSON.numero_casas)
             
-            criaHash(answerJSON.decifrado);
+            answerJSON.decifrado = decifra(answerJSON.cifrado, answerJSON.numero_casas)
+            answerJSON.resumo_criptografico = criaHash(answerJSON.decifrado);
 
+            console.log(answerJSON);
+
+            
         }else{
             erroAjax.classList.remove("invisivel");
         }
