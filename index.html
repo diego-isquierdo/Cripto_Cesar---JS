@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>AceleraDev</title>
 </head>
 <body>
     <h1>Desafio - Criptografia de Cesar</h1>
 
     <div>
-        <label for="generate"></label>
-        <input type="text" name="generate" id="inputGenerate" required>
+        <label for="token">Insira seu Token Codenation</label>
+        <input type="text" name="token" id="token" class="inputLink">
+    </div>
+    <div>
+        <label for="generate">Endereço da API do JSON</label>
+        <input type="text" name="generate" id="inputGenerate" class="inputLink">
     </div>
 
     
     <button id="buscarJSON" class="botao bto-principal">Buscar JSON</button>
     <span id="erro-ajax" class="invisivel">Erro ao buscar JSON</span>
     
-    <script src="js/buscar.js"></script>
+    <script src="js/principal.js"></script>
+    <script src="js/calcula.js"></script>
 </body>
 </html>
